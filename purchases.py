@@ -24,9 +24,11 @@ for i in range(purchases):
     customers.append(input("Customer: "))
     costs_pre_tax.append(float(input("Cost: ")))
 
+final_cost = add_tax(costs_pre_tax, sales_tax)
+
 # Dictionary with {Customer, Sales after tax} pairs
 res = {}
-final_cost = add_tax(costs_pre_tax, sales_tax)
+
 for i in range(len(final_cost)):
     if customers[i] in res:
         res[customers[i]] += final_cost[i]
