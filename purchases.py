@@ -7,10 +7,12 @@
 
 # returns a new list with that sales tax applied to each value in the list.
 def add_tax(costs, tax):
-    for i in range(len(costs)):
-        costs[i] *= (1 + tax)
 
-    return costs
+    new_costs = []
+    for i in range(len(costs)):
+        new_costs.append(costs[i] * (1 + tax))
+
+    return new_costs
 
 
 # Get user inputs
